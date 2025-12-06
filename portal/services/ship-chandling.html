@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ship Chandling — SyOceanic</title>
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+<div class="page-wrapper">
+  <header class="site-header">
+    <div class="site-brand">
+      <img src="/logo.png" alt="SyOceanic Logo" class="brand-logo" />
+      <div>
+        <div class="brand-title"></div>
+        <div class="brand-subtitle">Ship Chandling & Supplies</div>
+      </div>
+    </div>
+    <nav class="primary">
+      <a href="/index.html">Home</a>
+      <a href="/services/china-shipping.html">China Shipping</a>
+      <a href="/services/china-preorder.html">Preorder</a>
+      <a href="/services/china-tracking.html">Track</a>
+      <a href="/services/china-calculator.html">Calculator</a>
+      <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+      <a href="/services/ship-chandling.html" class="active">Ship Chandling</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">Ship Chandling & Marine Supply</h1>
+        <p class="hero-tagline">
+          Provisioning, technical supplies and local logistics support for vessels calling at Jamaican ports.
+        </p>
+        <div class="hero-cta-row">
+          <button class="btn btn-primary" onclick="document.getElementById('chandler-form').scrollIntoView({behavior:'smooth'})">
+            Request Chandling Quote
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Core Services</h3>
+          <p>Fresh produce, dry goods, bonded stores, deck & engine spares, safety equipment and more.</p>
+        </div>
+        <div class="card" style="margin-top:10px;">
+          <h3>Coverage</h3>
+          <p>Support for vessels at Kingston, Montego Bay and other Jamaican ports via partner network.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chandler-form">
+      <div class="section-header">
+        <h2 class="section-title">Chandling Request</h2>
+        <p class="section-subtitle">Tell us what your vessel needs – we’ll follow up with pricing and availability.</p>
+      </div>
+
+      <div class="form-card">
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Vessel Name</label>
+              <input type="text" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">IMO / Call Sign</label>
+              <input type="text" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Port</label>
+              <select class="form-select">
+                <option>Kingston</option>
+                <option>Montego Bay</option>
+                <option>Other Jamaican Port</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">ETA</label>
+              <input type="date" class="form-input" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Required Items / Notes</label>
+            <textarea class="form-textarea" placeholder="Provision list, technical items, special requests..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top:4px;">
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    © 2025 SyOceanic Limited — Ship Chandling Division.
+  </footer>
+</div>
+</body>
+</html>

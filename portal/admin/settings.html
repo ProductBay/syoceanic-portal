@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Settings – SyOceanic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+
+<body class="so-body so-body-admin">
+
+  <div class="so-layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="so-sidebar">
+      <div class="so-sidebar-header">
+        <img src="../assets/logo-syoceanic.svg" class="so-logo">
+        <h2 class="so-logo-text">Admin Console</h2>
+      </div>
+
+      <nav class="so-nav">
+        <a href="./dashboard.html" class="so-nav-link">📦 Shipments</a>
+        <a href="./add-shipment.html" class="so-nav-link">➕ Add Shipment</a>
+        <a href="./settings.html" class="so-nav-link so-nav-link-active">⚙️ Settings</a>
+      </nav>
+
+      <div class="so-sidebar-footer">
+        <button id="adminLogout" class="so-btn so-btn-outline">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="so-layout">
+
+      <!-- TOPBAR -->
+      <header class="so-topbar">
+        <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
+
+        <div class="so-topbar-title">
+          <h1>Account Settings</h1>
+          <p class="so-topbar-subtitle">Manage your profile & preferences</p>
+        </div>
+
+        <div class="so-topbar-right">
+          <div id="profileMenuBtn" class="so-topbar-profile">
+            <div id="adminEmailLabel" class="so-topbar-email">admin@example.com</div>
+            <div id="adminAvatar" class="so-user-avatar">A</div>
+          </div>
+
+          <!-- DROPDOWN -->
+          <div id="profileDropdown" class="so-dropdown hidden">
+            <div id="adminDropdownEmail" class="so-dropdown-email">admin@example.com</div>
+            <a href="./settings.html" class="so-dropdown-item">⚙️ Settings</a>
+            <button id="adminLogoutDd" class="so-dropdown-item so-dropdown-logout">🚪 Log Out</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+   <main class="so-main">
+
+  <section class="so-section">
+   <div class="so-card so-card-panel">
+  <h2>Profile Information</h2>
+  <div id="settingsAlert"></div>
+
+  <div class="so-settings-profile">
+
+    <!-- LEFT: AVATAR COLUMN -->
+    <div class="so-settings-avatar">
+      <img
+        id="avatarPreview"
+        class="so-avatar-preview"
+        src="../assets/logo/logo-syoceanic.svg"
+        alt="Profile avatar"
+      />
+
+      <button type="button" id="uploadAvatarBtn" class="so-btn so-btn-full">
+        Change Photo
+      </button>
+
+      <!-- hidden file input -->
+      <input type="file" id="avatarFile" accept="image/*" style="display:none;" />
+    </div>
+
+    <!-- RIGHT: FIELDS COLUMN -->
+    <form id="settingsForm" class="so-form so-settings-fields">
+      <label>Full Name</label>
+      <input id="adminName" class="so-input" placeholder="Your name">
+
+      <label>Phone Number</label>
+      <input id="adminPhone" class="so-input" placeholder="Your phone">
+
+      <label>Change Password</label>
+      <input id="adminPassword" type="password" class="so-input" placeholder="New password">
+
+      <button type="submit" class="so-btn so-btn-full">Save Changes</button>
+    </form>
+
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+</main>
+
+
+    </div><!-- END .so-layout -->
+
+  </div><!-- END wrapper -->
+
+  <script type="module" src="../js/admin-settings.js"></script>
+<script type="module" src="../js/settings.js"></script>
+
+</body>
+</html>

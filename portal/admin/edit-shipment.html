@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Shipment — SyOceanic Admin</title>
+<link rel="stylesheet" href="/css/global.css">
+
+<style>
+.form-card {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+}
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-brand">
+    <img src="/logo.png" class="brand-logo">
+    <div class="brand-title">Edit Shipment</div>
+  </div>
+
+  <nav class="primary">
+    <a href="/admin/dashboard.html">Dashboard</a>
+    <a href="#" id="admin-logout">Logout</a>
+  </nav>
+</header>
+
+<section class="form-card fade-in">
+  <h1>Edit Shipment</h1>
+
+  <form id="editForm"></form>
+
+  <p id="edit-msg" style="margin-top:12px;color:#b91c1c;"></p>
+
+  <button id="add-event-btn" class="btn-outline" style="margin-top:20px;">
+    Add Timeline Event
+  </button>
+</section>
+
+<script type="module" src="/js/edit-shipment.js"></script>
+</body>
+</html>

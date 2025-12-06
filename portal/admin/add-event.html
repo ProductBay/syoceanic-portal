@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Event — SyOceanic Admin</title>
+<link rel="stylesheet" href="/css/global.css">
+
+<style>
+.form-card {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 32px;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:var(--shadow-soft);
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-brand">
+    <img src="/logo.png" class="brand-logo">
+    <div class="brand-title">Add Timeline Event</div>
+  </div>
+</header>
+
+<section class="form-card fade-in">
+  <form id="eventForm">
+
+    <label>Status</label>
+    <input id="ev_status" required>
+
+    <label>Location</label>
+    <input id="ev_loc">
+
+    <label>Details</label>
+    <textarea id="ev_details" rows="3"></textarea>
+
+    <button class="btn-primary" style="margin-top:20px;">Save Event</button>
+
+    <p id="ev-msg" style="margin-top:12px;color:#b91c1c;"></p>
+  </form>
+</section>
+
+<script type="module" src="/js/add-event.js"></script>
+</body>
+</html>

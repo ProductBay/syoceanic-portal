@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Shipment – SyOceanic Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/portal.css" />
+</head>
+
+<body class="so-body so-body-admin">
+
+  <!-- WRAPPER -->
+  <div class="so-layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="so-sidebar">
+      <div class="so-sidebar-header">
+        <img src="../assets/logo.png" class="so-logo" />
+        <h2 class="so-logo-text">Admin Console</h2>
+      </div>
+
+      <nav class="so-nav">
+        <a href="./dashboard.html" class="so-nav-link">📦 Shipments</a>
+        <a href="./add-shipment.html" class="so-nav-link so-nav-link-active">➕ Add Shipment</a>
+      </nav>
+
+      <div class="so-sidebar-footer">
+        <button id="adminLogout" class="so-btn so-btn-outline">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- MAIN LAYOUT -->
+    <div class="so-layout">
+
+      <!-- TOPBAR -->
+      <header class="so-topbar">
+        <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
+
+        <div class="so-topbar-title">
+          <h1>Add New Shipment</h1>
+          <p class="so-topbar-subtitle">Enter shipment details below</p>
+        </div>
+
+        <div id="adminAvatar" class="so-user-avatar">A</div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="so-main">
+
+        <section class="so-section">
+          <div class="so-card so-card-panel">
+            <h2>Create Shipment</h2>
+
+            <div id="adminAlert" class="so-alert-container"></div>
+
+            <form id="addShipmentForm" class="so-form" onsubmit="return false;">
+              <label>Customer Name</label>
+              <input id="cName" class="so-input" required />
+
+              <label>Customer Email</label>
+              <input id="cEmail" type="email" class="so-input" required />
+
+              <label>Customer Phone</label>
+              <input id="cPhone" class="so-input" />
+
+              <label>Freight Type</label>
+              <select id="freightType" class="so-input">
+                <option value="Air">Air</option>
+                <option value="Sea">Sea</option>
+                <option value="Express">Express</option>
+              </select>
+
+              <label>Shipment Location</label>
+              <input id="location" class="so-input" />
+
+              <label>Estimated Arrival (ETA)</label>
+              <input id="eta" type="date" class="so-input" />
+
+              <label>Weight (kg)</label>
+              <input id="weight" type="number" min="0" class="so-input" />
+
+              <label>Dimensions (cm)</label>
+              <input id="dimensions" class="so-input" />
+
+              <button id="submitBtn" class="so-btn so-btn-full" type="submit">
+                Create Shipment
+              </button>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div><!-- END .so-layout -->
+
+  </div><!-- END .so-layout-wrapper -->
+
+  <script type="module" src="../js/admin-add-shipment.js"></script>
+
+</body>
+</html>

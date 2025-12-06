@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipment Tracking — SyOceanic Limited</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <style>
+    .track-hero {
+      max-width: 900px;
+      margin: 70px auto 30px;
+      padding: 40px 32px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .track-hero h1 {
+      font-size: 2rem;
+      color: var(--ocean);
+      margin-bottom: 8px;
+    }
+
+    .track-hero p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .track-form {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      padding: 28px 24px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .track-form label {
+      display: block;
+      font-weight: 600;
+      color: var(--ocean);
+      margin-bottom: 6px;
+    }
+
+    .track-form input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(148,163,184,0.7);
+      font-family: inherit;
+    }
+
+    .timeline {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      padding: 24px;
+    }
+
+    .timeline h2 {
+      margin-bottom: 10px;
+      color: var(--ocean);
+    }
+
+    .timeline-item {
+      border-left: 3px solid var(--wave);
+      padding-left: 12px;
+      margin-left: 4px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+    }
+
+    .timeline-item strong {
+      display: block;
+      color: var(--ocean);
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-brand">
+      <img src="/logo.png" class="brand-logo" alt="SyOceanic Logo" />
+      <div>
+        <div class="brand-title">SyOceanic Limited</div>
+        <div class="brand-subtitle">Shipping · Auctions · Store · Ship Chandling</div>
+      </div>
+    </div>
+
+    <nav class="primary">
+      <a href="/index.html">Home</a>
+      <a href="/services/china-shipping.html">China Shipping</a>
+      <a href="/services/china-preorder.html">Preorder</a>
+      <a href="/services/china-tracking.html" class="active">Track</a>
+      <a href="/services/china-calculator.html">Calculator</a>
+      <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+      <a href="/services/online-store.html">Online Store</a>
+      <a href="/services/ship-chandling.html">Ship Chandling</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="track-hero fade-in">
+      <h1>Track Your Shipment</h1>
+      <p>
+        Enter your SyOceanic tracking number to view a sample milestone timeline. This page
+        is for demonstration and does not pull live tracking data.
+      </p>
+    </section>
+
+    <!-- TRACK FORM -->
+    <section class="track-form fade-in">
+      <label for="trackingId">Tracking Number</label>
+      <input id="trackingId" type="text" placeholder="SYOC-CHINA-000001 (Demo)" />
+      <p class="form-note" style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">
+        In a production system this field would query SyOceanic’s logistics backend and
+        display live status updates.
+      </p>
+
+      <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn-primary" type="button">Track Shipment (Demo)</button>
+        <button class="btn-outline" type="button" onclick="location.href='/services/china-shipping.html'">
+          Back to China Shipping
+        </button>
+      </div>
+    </section>
+
+    <!-- SAMPLE TIMELINE -->
+    <section class="timeline fade-in">
+      <h2>Sample Tracking Timeline</h2>
+      <div class="timeline-item">
+        <strong>Arrived in Jamaica</strong>
+        Customs clearance in progress.
+      </div>
+      <div class="timeline-item">
+        <strong>Departed China Hub</strong>
+        Cargo loaded and manifested on outbound vessel/flight.
+      </div>
+      <div class="timeline-item">
+        <strong>Received at SyOceanic China Warehouse</strong>
+        Shipment checked in and prepared for consolidation.
+      </div>
+      <div class="timeline-item">
+        <strong>Supplier Dispatched</strong>
+        Your supplier handed over the goods to SyOceanic’s warehouse partner.
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-foot fade-in">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/logo.png" class="footer-logo" alt="SyOceanic Logo" />
+        <p>SyOceanic Limited — Shipping • Commerce • Marine Support</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/services/china-shipping.html">China Shipping</a>
+        <a href="/services/online-store.html">Online Store</a>
+        <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+        <a href="/services/ship-chandling.html">Ship Chandling</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+
+      <p class="footer-copy">
+        © 2025 SyOceanic Limited — All Rights Reserved.<br />
+        Developed by <strong>A’Dash Tech</strong> — Lead Developer: <strong>Ashandie Powell</strong>.
+      </p>
+
+      <p class="footer-legal">
+        This tracking view is a demonstration only and does not represent live logistics data.
+        Any sample information shown is fictional and for illustrative purposes. Attempting to
+        misuse this page, including automated scraping or injection of malicious content, is
+        prohibited and may lead to blocked access and additional remedial measures.
+      </p>
+    </div>
+  </footer>
+</div>
+
+<div class="contact-strip">
+  <a href="https://wa.me/18765947320" class="cs-btn" target="_blank">💬 WhatsApp Us</a>
+  <a href="tel:+18765947320" class="cs-btn">📞 Call</a>
+  <a href="mailto:support@syoceanic.com" class="cs-btn">✉ Email</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },
+    { threshold: 0.15 }
+  );
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

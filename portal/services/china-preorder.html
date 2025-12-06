@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>China Preorder — SyOceanic Limited</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <style>
+    .preorder-hero {
+      max-width: 900px;
+      margin: 70px auto 30px;
+      padding: 40px 32px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .preorder-hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--ocean);
+    }
+
+    .preorder-hero p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .preorder-form {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      padding: 30px 26px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .preorder-form h2 {
+      margin-bottom: 12px;
+      color: var(--ocean);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.9rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      color: var(--ocean);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(148,163,184,0.7);
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    .form-group textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    @media (max-width: 800px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-brand">
+      <img src="/logo.png" class="brand-logo" alt="SyOceanic Logo" />
+      <div>
+        <div class="brand-title">SyOceanic Limited</div>
+        <div class="brand-subtitle">Shipping · Auctions · Store · Ship Chandling</div>
+      </div>
+    </div>
+
+    <nav class="primary">
+      <a href="/index.html">Home</a>
+      <a href="/services/china-shipping.html">China Shipping</a>
+      <a href="/services/china-preorder.html" class="active">Preorder</a>
+      <a href="/services/china-tracking.html">Track</a>
+      <a href="/services/china-calculator.html">Calculator</a>
+      <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+      <a href="/services/online-store.html">Online Store</a>
+      <a href="/services/ship-chandling.html">Ship Chandling</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="preorder-hero fade-in">
+      <h1>China Preorder Request</h1>
+      <p>
+        Use this form to request a quote for items you want SyOceanic to purchase and ship
+        from China on your behalf. Provide as much detail as possible so we can give you an
+        accurate estimate for product cost, shipping and related fees.
+      </p>
+      <p class="form-note">
+        This is a demo form for presentation purposes. Submissions on this page are not
+        processed as live orders.
+      </p>
+    </section>
+
+    <!-- FORM -->
+    <section class="preorder-form fade-in">
+      <h2>Preorder Details</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="fullName">Your Full Name</label>
+          <input id="fullName" type="text" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">WhatsApp / Phone</label>
+          <input id="phone" type="text" placeholder="+1 (876) 000-0000" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="parish">Parish</label>
+          <select id="parish">
+            <option value="">Select parish</option>
+            <option>Kingston & St. Andrew</option>
+            <option>St. Catherine</option>
+            <option>Clarendon</option>
+            <option>Manchester</option>
+            <option>St. Elizabeth</option>
+            <option>Westmoreland</option>
+            <option>Hanover</option>
+            <option>St. James</option>
+            <option>Trelawny</option>
+            <option>St. Ann</option>
+            <option>St. Mary</option>
+            <option>Portland</option>
+            <option>St. Thomas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top:16px;">
+        <label for="productLinks">Product Links (Alibaba, 1688, Temu, etc.)</label>
+        <textarea id="productLinks" placeholder="Paste one or more links here"></textarea>
+      </div>
+
+      <div class="form-group" style="margin-top:12px;">
+        <label for="notes">Additional Notes / Requirements</label>
+        <textarea id="notes" placeholder="Colours, sizes, quantity, deadlines, shipping preference (air/sea)"></textarea>
+      </div>
+
+      <p class="form-note">
+        By submitting this form you are requesting an estimate only. Final pricing is subject
+        to supplier confirmation, currency movements, freight rates and customs rules at the
+        time of actual purchase.
+      </p>
+
+      <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn-primary" type="button">Submit Preorder (Demo)</button>
+        <button class="btn-outline" type="button" onclick="location.href='/services/china-shipping.html'">
+          Back to China Shipping
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-foot fade-in">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/logo.png" class="footer-logo" alt="SyOceanic Logo" />
+        <p>SyOceanic Limited — Shipping • Commerce • Marine Support</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/services/china-shipping.html">China Shipping</a>
+        <a href="/services/online-store.html">Online Store</a>
+        <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+        <a href="/services/ship-chandling.html">Ship Chandling</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+
+    <p class="footer-copy">
+        © 2025 SyOceanic Limited — All Rights Reserved.<br />
+        Developed by <strong>A’Dash Tech</strong> Mayfield Blvd, Southfield, St ELizabeth, Jamaica — Lead Developer: <strong>Ashandie Powell</strong>.
+      </p>
+      <p class="footer-legal">
+        This website is provided as a demonstration platform for SyOceanic Limited. All content,
+        branding and workflows are illustrative and may not reflect final commercial operations.
+        By using this demo, you agree not to misuse the system, attempt unauthorized access, or
+        submit harmful, fraudulent or illegal data. Misuse or abuse of this platform may result
+        in revoked access, reporting to relevant service providers, and legal action where
+        applicable.
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<div class="contact-strip">
+  <a href="https://wa.me/18765947320" class="cs-btn" target="_blank">💬 WhatsApp Us</a>
+  <a href="tel:+18765947320" class="cs-btn">📞 Call</a>
+  <a href="mailto:support@syoceanic.com" class="cs-btn">✉ Email</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },
+    { threshold: 0.15 }
+  );
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

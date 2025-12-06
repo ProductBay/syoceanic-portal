@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard – SyOceanic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+
+<body class="so-body so-body-admin">
+
+  <!-- WRAPPER: Sidebar + Main Content -->
+  <div class="so-layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="so-sidebar">
+      <div class="so-sidebar-header">
+        <img src="../assets/logo/logo.png" class="so-logo">
+        <h2 class="so-logo-text">Admin Console</h2>
+      </div>
+
+      <nav class="so-nav">
+        <a href="./dashboard.html" class="so-nav-link so-nav-link-active">📦 Shipments</a>
+        <a href="./add-shipment.html" class="so-nav-link">➕ Add Shipment</a>
+      </nav>
+
+      <div class="so-sidebar-footer">
+        <button id="adminLogout" class="so-btn so-btn-outline">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- MAIN LAYOUT (topbar + content) -->
+    <div class="so-layout">
+
+     <!-- TOP BAR -->
+<header class="so-topbar">
+  <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
+
+  <div class="so-topbar-title">
+    <h1>Admin Dashboard</h1>
+    <p class="so-topbar-subtitle">Manage all shipments</p>
+  </div>
+
+  <div class="so-topbar-right">
+  <div id="profileMenuBtn" class="so-topbar-profile">
+    <div id="adminEmailLabel" class="so-topbar-email">admin@example.com</div>
+    <div id="adminAvatar" class="so-user-avatar">A</div>
+  </div>
+
+  <!-- DROPDOWN -->
+  <div id="profileDropdown" class="so-dropdown hidden">
+    <div class="so-dropdown-email" id="adminDropdownEmail">admin@example.com</div>
+
+    <a href="./settings.html" class="so-dropdown-item">⚙️ Settings</a>
+    <button id="adminLogout" class="so-dropdown-item so-dropdown-logout">🚪 Log Out</button>
+  </div>
+</div>
+
+</header>
+
+
+
+    
+<!-- TIMELINE MODAL -->
+<div id="timelineModal" class="so-modal">
+  <div class="so-modal-content">
+
+    <button id="timelineClose" class="so-modal-close">×</button>
+    <h2>Shipment Timeline</h2>
+
+    <p id="timelineTracking" class="so-topbar-subtitle"></p>
+
+    <ul id="timelineList" class="so-activity-list">
+      <li class="so-activity-placeholder">Loading timeline…</li>
+    </ul>
+
+    <h3 style="margin-top:1.25rem;">Add Event</h3>
+
+    <div class="so-form">
+      <label>Status</label>
+      <select id="eventStatus" class="so-input">
+        <option>Arrived</option>
+        <option>Departed</option>
+        <option>In Transit</option>
+        <option>Ready for Pickup</option>
+        <option>Delivered</option>
+      </select>
+
+      <label>Location</label>
+      <input id="eventLocation" class="so-input" placeholder="Location">
+
+      <label>Details</label>
+      <input id="eventDetails" class="so-input" placeholder="Extra notes...">
+
+      <button id="addEventBtn" class="so-btn so-btn-full">Add Event</button>
+    </div>
+
+  </div>
+</div>
+
+      <!-- MAIN CONTENT -->
+      <main class="so-main">
+
+        <section class="so-section">
+          <div class="so-card so-card-panel">
+            <h2>All Shipments</h2>
+
+            <div class="so-table-wrapper">
+              <table class="so-table">
+                <thead>
+                  <tr>
+                    <th>Tracking #</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Updated</th>
+                    <th></th>
+                  </tr>
+                </thead>
+
+                <tbody id="shipmentsBody">
+                  <tr><td colspan="5" class="so-table-empty">Loading...</td></tr>
+                </tbody>
+
+              </table>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+    </div><!-- END .so-layout -->
+
+  </div><!-- END .so-layout-wrapper -->
+
+
+  <!-- EDIT SHIPMENT MODAL -->
+  <div id="editModal" class="so-modal">
+    <div class="so-modal-content">
+      <button id="editClose" class="so-modal-close">×</button>
+      <h2>Edit Shipment</h2>
+
+      <div id="editFormContainer" class="so-form"></div>
+
+      <div class="so-modal-footer">
+        <button id="saveShipment" class="so-btn so-btn-full">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminAlert" class="so-alert-floating"></div>
+
+  <script type="module" src="../js/admin-dashboard.js"></script>
+</body>
+</html>

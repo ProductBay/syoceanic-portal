@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Customer Login – SyOceanic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/portal.css" />
+</head>
+
+<body class="so-body">
+
+  <div class="so-login-wrapper">
+    <div class="so-card so-login-card">
+
+      <img src="../assets/logo/logo.png" class="so-login-logo" />
+
+
+      <h1 class="so-login-title">Welcome Back</h1>
+      <p class="so-login-subtitle">Sign in to track your shipments</p>
+
+      <div id="loginAlert"></div>
+
+      <form id="loginForm" class="so-login-form" onsubmit="return false;">
+
+        <input id="loginEmail" type="email" class="so-input" placeholder="Email address" required />
+
+        <input id="loginPassword" type="password" class="so-input" placeholder="Password" required />
+
+        <button id="loginBtn" class="so-btn so-btn-full">Sign In</button>
+
+        <button id="magicLinkBtn" type="button" class="so-btn so-btn-outline so-btn-full">
+          Send Magic Login Link
+        </button>
+
+        <p class="so-login-footer">
+          <a href="./forgot-password.html" class="so-link-small">Forgot password?</a>
+        </p>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script type="module" src="../js/customer-login.js"></script>
+
+</body>
+</html>

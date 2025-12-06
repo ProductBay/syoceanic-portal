@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auction Item — SyOceanic</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/auction.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">
+        <img src="../assets/logo.png" alt="">
+        <h1>SyOceanic Limited</h1>
+    </div>
+</header>
+
+<section class="auction-item-detail">
+    <div class="item-images">
+        <img src="../assets/images/auction-items/item1.jpg" alt="">
+        <div class="thumbs">
+            <img src="../assets/images/auction-items/item1.jpg" alt="">
+            <img src="../assets/images/auction-items/item1b.jpg" alt="">
+        </div>
+    </div>
+    <div class="item-info">
+        <h2>Item Name 1</h2>
+        <p>Starting Bid: USD $15</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Auction Ends: <span class="timer" data-end="2025-12-31T23:59:59"></span></p>
+        <label>Your Bid (USD):</label>
+        <input type="number" min="15" value="15" id="bidAmount">
+        <button class="btn" onclick="placeBid()">Place Bid</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 SyOceanic Limited</p>
+</footer>
+
+<script src="../js/auction.js"></script>
+</body>
+</html>

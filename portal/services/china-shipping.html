@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>China Shipping — SyOceanic Limited</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <style>
+    .shipping-hero {
+      max-width: 1100px;
+      margin: 70px auto 40px;
+      padding: 40px 32px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      display: grid;
+      grid-template-columns: 1.2fr 1.1fr;
+      gap: 32px;
+    }
+
+    .shipping-hero h1 {
+      font-size: 2.1rem;
+      color: var(--ocean);
+      margin-bottom: 10px;
+    }
+
+    .shipping-hero p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .shipping-list {
+      margin-top: 16px;
+      padding-left: 18px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .info-grid {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .info-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+      color: var(--ocean);
+    }
+
+    .process-section {
+      max-width: 1100px;
+      margin: 0 auto 50px;
+      padding: 32px 26px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .process-step {
+      background: #f5f8ff;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .process-step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ocean);
+    }
+
+    @media (max-width: 900px) {
+      .shipping-hero {
+        grid-template-columns: 1fr;
+      }
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .info-grid,
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-brand">
+      <img src="/logo.png" class="brand-logo" alt="SyOceanic Logo" />
+      <div>
+        <div class="brand-title">SyOceanic Limited</div>
+        <div class="brand-subtitle">Shipping · Auctions · Store · Ship Chandling</div>
+      </div>
+    </div>
+
+    <nav class="primary">
+      <a href="/index.html">Home</a>
+      <a href="/services/china-shipping.html" class="active">China Shipping</a>
+      <a href="/services/china-preorder.html">Preorder</a>
+      <a href="/services/china-tracking.html">Track</a>
+      <a href="/services/china-calculator.html">Calculator</a>
+      <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+      <a href="/services/online-store.html">Online Store</a>
+      <a href="/services/ship-chandling.html">Ship Chandling</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="shipping-hero fade-in">
+      <div>
+        <h1>China to Jamaica Shipping Service</h1>
+        <p>
+          SyOceanic provides consolidated air and sea freight from major Chinese hubs to
+          Jamaica, handling forwarding, customs clearance and final delivery so you don’t
+          have to.
+        </p>
+
+        <ul class="shipping-list">
+          <li>Ship from Alibaba, 1688, Temu, Taobao and other marketplaces.</li>
+          <li>Use our China warehouse address for consolidations.</li>
+          <li>Flexible air and sea options depending on size and urgency.</li>
+          <li>Local Jamaican team to assist with customs and pickup.</li>
+        </ul>
+
+        <div class="hero-cta-row" style="margin-top:18px;">
+          <button class="btn-primary" onclick="location.href='/services/china-preorder.html'">
+            Submit a Preorder Request
+          </button>
+          <button class="btn-outline" onclick="location.href='/services/china-calculator.html'">
+            Estimate Shipping Cost
+          </button>
+        </div>
+      </div>
+
+      <div class="info-card fade-in">
+        <h3>Standard Transit Times</h3>
+        <p><strong>Air Freight:</strong> ~7–14 days after departure.</p>
+        <p><strong>Sea Freight:</strong> ~4–8 weeks depending on sailing and clearance.</p>
+        <p style="margin-top:10px;">
+          Consolidation schedules, peak-season demand and customs processes can affect final
+          timelines. Our team will advise on the best option for your shipment.
+        </p>
+      </div>
+    </section>
+
+    <!-- INFO GRID -->
+    <section class="info-grid fade-in">
+      <div class="info-card">
+        <h3>What You Can Ship</h3>
+        <p>
+          We handle most consumer goods including electronics, clothing, tools, household
+          items, parts and accessories. Certain restricted items require pre-approval.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Billing & Charges</h3>
+        <p>
+          Billing is based on chargeable weight (actual vs. volumetric), freight method,
+          handling fees, and any customs duties/taxes applicable on arrival into Jamaica.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Pickup & Delivery</h3>
+        <p>
+          Collect parcels at designated SyOceanic locations or request islandwide delivery
+          for an additional fee. Delivery options vary by parish and shipment size.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section fade-in">
+      <h2>How the SyOceanic China Shipping Process Works</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <strong>1. Share Your Links</strong>
+          Send product links or upload invoice details. Our team confirms feasibility and
+          gives you an estimate.
+        </div>
+        <div class="process-step">
+          <strong>2. Ship to Our Warehouse</strong>
+          Once approved, ship your items to our China warehouse address using your chosen
+          supplier or marketplace.
+        </div>
+        <div class="process-step">
+          <strong>3. Consolidation & Freight</strong>
+          We consolidate shipments, arrange air or sea freight, and manage export and import
+          documentation.
+        </div>
+        <div class="process-step">
+          <strong>4. Customs & Collection</strong>
+          SyOceanic manages local clearance and notifies you when items are ready for pickup
+          or delivery in Jamaica.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-foot fade-in">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/logo.png" class="footer-logo" alt="SyOceanic Logo" />
+        <p>SyOceanic Limited — Shipping • Commerce • Marine Support</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/services/china-shipping.html">China Shipping</a>
+        <a href="/services/online-store.html">Online Store</a>
+        <a href="/services/auction-warehouse.html">Auction Warehouse</a>
+        <a href="/services/ship-chandling.html">Ship Chandling</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+
+      <p class="footer-copy">
+        © 2025 SyOceanic Limited — All Rights Reserved.<br />
+        Developed by <strong>A’Dash Tech</strong> Mayfield Blvd, Southfield, St ELizabeth, Jamaica — Lead Developer: <strong>Ashandie Powell</strong>.
+      </p>
+
+      <p class="footer-legal">
+        This website is provided as a demonstration platform for SyOceanic Limited. All content,
+        branding and workflows are illustrative and may not reflect final commercial operations.
+        By using this demo, you agree not to misuse the system, attempt unauthorized access, or
+        submit harmful, fraudulent or illegal data. Misuse or abuse of this platform may result
+        in revoked access, reporting to relevant service providers, and legal action where
+        applicable.
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- CONTACT STRIP -->
+<div class="contact-strip">
+  <a href="https://wa.me/18765947320" class="cs-btn" target="_blank">💬 WhatsApp Us</a>
+  <a href="tel:+18765947320" class="cs-btn">📞 Call</a>
+  <a href="mailto:support@syoceanic.com" class="cs-btn">✉ Email</a>
+</div>
+
+<!-- FADE-IN SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },
+    { threshold: 0.15 }
+  );
+  faders.forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

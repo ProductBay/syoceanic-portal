@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auction Warehouse — SyOceanic Limited</title>
+  <link rel="stylesheet" href="/css/global.css" />
+
+  <style>
+    .auction-hero {
+      max-width: 1100px;
+      margin: 70px auto 30px;
+      padding: 40px 32px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .auction-hero h1 {
+      font-size: 2rem;
+      color: var(--ocean);
+      margin-bottom: 10px;
+    }
+
+    .auction-grid {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .auction-card {
+      padding: 18px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .auction-card strong {
+      display: block;
+      color: var(--ocean);
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .auction-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .auction-warning {
+      max-width: 1100px;
+      margin: 0 auto 30px;
+      padding: 20px;
+      background: #fff7e6;
+      border-radius: 10px;
+      border-left: 4px solid #ff9900;
+      color: #664400;
+    }
+
+    @media(max-width:900px){
+      .auction-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:650px){
+      .auction-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+<header class="site-header">
+  <div class="site-brand">
+    <img src="/logo.png" class="brand-logo">
+    <div>
+      <div class="brand-title">SyOceanic Limited</div>
+      <div class="brand-subtitle">Shipping · Auctions · Store · Ship Chandling</div>
+    </div>
+  </div>
+
+  <nav class="primary">
+    <a href="/index.html">Home</a>
+    <a href="/services/china-shipping.html">China Shipping</a>
+    <a href="/services/china-preorder.html">Preorder</a>
+    <a href="/services/china-tracking.html">Track</a>
+    <a href="/services/china-calculator.html">Calculator</a>
+    <a href="/services/auction-warehouse.html" class="active">Auction Warehouse</a>
+    <a href="/services/online-store.html">Online Store</a>
+    <a href="/services/ship-chandling.html">Ship Chandling</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="auction-hero fade-in">
+  <h1>SyOceanic Auction Warehouse</h1>
+  <p>
+    SyOceanic sells unclaimed customer cargo, excess stock, damaged-box items, and liquidation
+    pallets through our auction warehouse. This helps recover shipping costs from parcels not
+    collected by customers.
+  </p>
+  <p style="margin-top:8px; font-size:0.85rem; color:var(--text-muted);">
+    This page is a demo preview for showcasing warehouse auction structure, not a live catalog.
+  </p>
+</section>
+
+<section class="auction-warning fade-in">
+  <strong>⚠ Important Notice</strong><br>
+  Auction inventory moves quickly and item conditions vary. All sales are final in the actual
+  system. This demo page shows example categories only.
+</section>
+
+<section class="auction-grid fade-in">
+  <div class="auction-card">
+    <strong>Electronics Pallets</strong>
+    <p>Assorted small gadgets, accessories, chargers, earbuds, LED lighting and mixed inventory.</p>
+  </div>
+
+  <div class="auction-card">
+    <strong>Home & Kitchen Pallets</strong>
+    <p>Cookware sets, lamps, décor pieces, storage items, cleaning tools, etc.</p>
+  </div>
+
+  <div class="auction-card">
+    <strong>General Merchandise Pallets</strong>
+    <p>Variety mix: toys, tools, office supplies, seasonal items and miscellaneous bulk lots.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot fade-in">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="/logo.png" class="footer-logo">
+      <p>SyOceanic Limited — Shipping • Commerce • Marine Support</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="/index.html">Home</a>
+      <a href="/services/china-shipping.html">China Shipping</a>
+      <a href="/services/online-store.html">Online Store</a>
+      <a href="/services/ship-chandling.html">Ship Chandling</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+
+    <p class="footer-copy">© 2025 SyOceanic Limited — All Rights Reserved.<br>
+    Developed by <strong>A’Dash Tech</strong> — Lead Developer: <strong>Ashandie Powell</strong>.</p>
+
+    <p class="footer-legal">
+      Auction inventory shown is for demonstration only. No actual listings are active.  
+      Misuse such as unauthorized scraping, automation or impersonation is prohibited and
+      may result in blocked access and legal follow-up.
+    </p>
+  </div>
+</footer>
+
+</div>
+
+<div class="contact-strip">
+  <a href="https://wa.me/18765947320" class="cs-btn" target="_blank">💬 WhatsApp Us</a>
+  <a href="tel:+18765947320" class="cs-btn">📞 Call</a>
+  <a href="mailto:support@syoceanic.com" class="cs-btn">✉ Email</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("show"); }),
+    { threshold: .18 }
+  );
+  faders.forEach(el => obs.observe(el));
+});
+</script>
+
+</body>
+</html>
