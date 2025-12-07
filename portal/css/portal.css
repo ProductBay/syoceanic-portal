@@ -60,6 +60,26 @@ body.so-body {
   height: 100vh;
   z-index: 20;
 }
+/* Watermark inside sidebar */
+.so-sidebar {
+  position: relative;
+  overflow: hidden;
+}
+
+.so-sidebar::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  background: url('../assets/logo/logo.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 1;
+}
 
 .so-sidebar-header {
   display: flex;
@@ -1069,5 +1089,6 @@ body.so-body {
 }
 
 /* END OF FILE */
+
 
 
