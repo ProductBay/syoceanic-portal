@@ -5,25 +5,22 @@
   <title>My Shipments – SyOceanic Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FIXED CSS PATH -->
+  <!-- FIXED ABSOLUTE PATHS FOR VERCEL -->
   <link rel="stylesheet" href="/portal/css/portal.css">
 </head>
 
 <body class="so-body so-body-admin">
 
-  <!-- WRAPPER -->
   <div class="so-layout-wrapper">
-
-    <!-- SIDEBAR -->
+    
     <aside id="sidebar" class="so-sidebar">
       <div class="so-sidebar-header">
-        <!-- FIXED LOGO PATH -->
         <img src="/portal/assets/logo/logo.png" class="so-logo" alt="SyOceanic Logo">
         <h2 class="so-logo-text">Customer Portal</h2>
       </div>
 
       <nav class="so-nav">
-        <a href="./customer-dashboard.html" class="so-nav-link so-nav-link-active">
+        <a href="/portal/customer/dashboard.html" class="so-nav-link so-nav-link-active">
           📦 My Shipments
         </a>
       </nav>
@@ -33,29 +30,24 @@
       </div>
     </aside>
 
-    <!-- MAIN CONTENT LAYOUT -->
     <div class="so-layout">
 
-      <!-- TOP BAR -->
       <header class="so-topbar">
-        <!-- Sidebar toggle -->
         <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
 
         <div class="so-topbar-title">
           <h1>My Shipments</h1>
-          <p class="so-topbar-subtitle">Track all shipments linked to your SyOceanic account.</p>
+          <p class="so-topbar-subtitle">
+            Track all shipments linked to your SyOceanic account.
+          </p>
         </div>
 
-        <!-- Right-side controls -->
         <div class="so-topbar-right">
-
-          <!-- Online badge -->
           <div class="so-badge-pill so-badge-online">
             <span class="so-dot"></span>
             <span>Online</span>
           </div>
 
-          <!-- Notifications -->
           <div class="so-notif-wrapper">
             <div id="notifBell" class="so-notif-bell">
               🔔
@@ -69,26 +61,23 @@
             </div>
           </div>
 
-          <!-- Profile Menu -->
           <div id="profileMenuBtn" class="so-topbar-user">
             <div id="customerEmailLabel" class="so-topbar-email">user@example.com</div>
             <div id="customerAvatar" class="so-user-avatar">U</div>
           </div>
 
-          <!-- Profile Dropdown -->
           <div id="profileDropdown" class="so-dropdown hidden">
             <div id="profileDropdownEmail" class="so-dropdown-email">user@example.com</div>
-            <a class="so-dropdown-item" href="./settings.html">⚙️ Settings</a>
+            <a class="so-dropdown-item" href="/portal/customer/settings.html">⚙️ Settings</a>
             <button id="customerLogout" class="so-dropdown-item so-dropdown-logout">🚪 Log Out</button>
           </div>
         </div>
       </header>
 
-      <!-- MAIN PAGE AREA -->
       <main class="so-main">
+
         <section class="so-section">
 
-          <!-- Alert container -->
           <div id="customerAlert" class="so-alert-container"></div>
 
           <h2>Your Shipments</h2>
@@ -96,7 +85,6 @@
             These shipments are visible only to you, based on your email address.
           </p>
 
-          <!-- Search Bar -->
           <input 
             id="searchInput"
             class="so-input"
@@ -104,7 +92,6 @@
             style="margin-bottom: 1rem; max-width: 320px;"
           />
 
-          <!-- Filter Buttons -->
           <div class="so-filter-bar">
             <button class="so-filter-btn so-filter-active" data-filter="all">All</button>
             <button class="so-filter-btn" data-filter="in-transit">In Transit</button>
@@ -113,7 +100,6 @@
             <button class="so-filter-btn" data-filter="created">Created</button>
           </div>
 
-          <!-- Shipments list -->
           <div id="shipmentsList" class="so-grid-4">
             <div class="so-card so-card-panel">
               <p class="so-activity-placeholder">Loading your shipments...</p>
@@ -121,21 +107,9 @@
           </div>
 
         </section>
+
       </main>
 
-    </div><!-- END LAYOUT -->
-  </div><!-- END WRAPPER -->
-
-  <!-- TIMELINE MODAL -->
-  <div id="timelineModal" class="so-modal">
-    <div class="so-modal-content">
-      <button id="timelineClose" class="so-modal-close">×</button>
-      <h2>Shipment Timeline</h2>
-      <p id="timelineTracking" class="so-topbar-subtitle"></p>
-
-      <ul id="timelineList" class="so-activity-list">
-        <li class="so-activity-placeholder">Loading events...</li>
-      </ul>
     </div>
   </div>
 
@@ -144,4 +118,3 @@
 
 </body>
 </html>
-
