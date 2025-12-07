@@ -5,22 +5,20 @@
   <title>My Shipments – SyOceanic Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FIXED ABSOLUTE PATHS FOR VERCEL -->
+  <!-- FIXED CSS LINK -->
   <link rel="stylesheet" href="/portal/css/portal.css">
-
 </head>
 
 <body class="so-body so-body-admin">
 
   <div class="so-layout-wrapper">
-    
- <!-- SIDEBAR -->
+
+    <!-- SIDEBAR -->
     <aside id="sidebar" class="so-sidebar">
       <div class="so-sidebar-header">
         <img src="../assets/logo/logo.png" class="so-logo">
         <h2 class="so-logo-text">Customer Portal</h2>
       </div>
-
 
       <nav class="so-nav">
         <a href="/portal/customer/dashboard.html" class="so-nav-link so-nav-link-active">
@@ -33,30 +31,32 @@
       </div>
     </aside>
 
+    <!-- MAIN LAYOUT -->
     <div class="so-layout">
 
+      <!-- TOP BAR -->
       <header class="so-topbar">
         <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
 
         <div class="so-topbar-title">
           <h1>My Shipments</h1>
-          <p class="so-topbar-subtitle">
-            Track all shipments linked to your SyOceanic account.
-          </p>
+          <p class="so-topbar-subtitle">Track all shipments linked to your SyOceanic account.</p>
         </div>
 
         <div class="so-topbar-right">
+
+          <!-- Status -->
           <div class="so-badge-pill so-badge-online">
             <span class="so-dot"></span>
             <span>Online</span>
           </div>
 
+          <!-- Notifications -->
           <div class="so-notif-wrapper">
             <div id="notifBell" class="so-notif-bell">
               🔔
               <span id="notifCount" class="so-notif-count hidden">0</span>
             </div>
-
             <div id="notifDropdown" class="so-notif-dropdown hidden">
               <div id="notifList" class="so-notif-list">
                 <div class="so-notif-empty">No notifications yet</div>
@@ -64,19 +64,23 @@
             </div>
           </div>
 
+          <!-- Profile -->
           <div id="profileMenuBtn" class="so-topbar-user">
             <div id="customerEmailLabel" class="so-topbar-email">user@example.com</div>
             <div id="customerAvatar" class="so-user-avatar">U</div>
           </div>
 
+          <!-- Profile Dropdown -->
           <div id="profileDropdown" class="so-dropdown hidden">
             <div id="profileDropdownEmail" class="so-dropdown-email">user@example.com</div>
             <a class="so-dropdown-item" href="/portal/customer/settings.html">⚙️ Settings</a>
             <button id="customerLogout" class="so-dropdown-item so-dropdown-logout">🚪 Log Out</button>
           </div>
+
         </div>
       </header>
 
+      <!-- MAIN CONTENT -->
       <main class="so-main">
 
         <section class="so-section">
@@ -114,13 +118,11 @@
       </main>
 
     </div>
+
   </div>
 
-  <!-- FIXED JS PATH -->
+  <!-- JS -->
   <script type="module" src="/portal/js/customer-dashboard.js"></script>
 
 </body>
 </html>
-
-
-
