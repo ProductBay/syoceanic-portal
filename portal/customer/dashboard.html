@@ -1,129 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>My Shipments – SyOceanic Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- FIXED CSS LINK -->
-  <link rel="stylesheet" href="../css/portal.css">
+  <link rel="stylesheet" href="../css/portal.css" />
 </head>
 
 <body class="so-body so-body-admin">
 
+  <!-- WRAPPER -->
   <div class="so-layout-wrapper">
 
     <!-- SIDEBAR -->
     <aside id="sidebar" class="so-sidebar">
       <div class="so-sidebar-header">
-        <img src="../assets/logo/logo.png" class="so-logo">
+        <img src="../assets/logo/logo.png" class="so-logo" />
+
         <h2 class="so-logo-text">Customer Portal</h2>
       </div>
 
       <nav class="so-nav">
-        <a href="/portal/customer/dashboard.html" class="so-nav-link so-nav-link-active">
-          📦 My Shipments
-        </a>
+        <a href="./dashboard.html" class="so-nav-link so-nav-link-active">📦 My Shipments</a>
       </nav>
 
       <div class="so-sidebar-footer">
-        <button id="customerLogoutBtn" class="so-btn so-btn-outline">Log Out</button>
+        <button id="customerLogout" class="so-btn so-btn-outline">Log Out</button>
       </div>
     </aside>
 
     <!-- MAIN LAYOUT -->
     <div class="so-layout">
 
-      <!-- TOP BAR -->
       <header class="so-topbar">
-        <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
+  <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
 
-        <div class="so-topbar-title">
-          <h1>My Shipments</h1>
-          <p class="so-topbar-subtitle">Track all shipments linked to your SyOceanic account.</p>
-        </div>
+  <div class="so-topbar-title">
+    <h1>My Shipments</h1>
+    <p class="so-topbar-subtitle">
+      Track all shipments linked to your SyOceanic account.
+    </p>
+  </div>
+  <div class="so-filter-dropdown">
+  <button id="filterToggle" class="so-filter-btn">
+    Filter: <span id="currentFilterLabel">All</span> ▼
+  </button>
 
-        <div class="so-topbar-right">
+  <div id="filterMenu" class="so-filter-menu hidden">
+    <div class="so-filter-item" data-filter="all">All Shipments</div>
+    <div class="so-filter-item" data-filter="created">Created</div>
+    <div class="so-filter-item" data-filter="in_transit">In Transit</div>
+    <div class="so-filter-item" data-filter="ready">Ready for Pickup</div>
+    <div class="so-filter-item" data-filter="delivered">Delivered</div>
+  </div>
+</div>
 
-          <!-- Status -->
-          <div class="so-badge-pill so-badge-online">
-            <span class="so-dot"></span>
-            <span>Online</span>
-          </div>
+  <div class="so-topbar-right">
+  <!-- Online badge -->
+  <div class="so-badge-pill so-badge-online">
+    <span class="so-dot"></span>
+    <span>Online</span>
+  </div>
 
-          <!-- Notifications -->
-          <div class="so-notif-wrapper">
-            <div id="notifBell" class="so-notif-bell">
-              🔔
-              <span id="notifCount" class="so-notif-count hidden">0</span>
-            </div>
-            <div id="notifDropdown" class="so-notif-dropdown hidden">
-              <div id="notifList" class="so-notif-list">
-                <div class="so-notif-empty">No notifications yet</div>
-              </div>
-            </div>
-          </div>
+  <!-- NOTIFICATION WRAPPER -->
+  <div class="so-notif-wrapper">
+    <!-- Bell -->
+    <div id="notifBell" class="so-notif-bell">
+      🔔
+      <span id="notifCount" class="so-notif-count hidden">0</span>
+    </div>
 
-          <!-- Profile -->
-          <div id="profileMenuBtn" class="so-topbar-user">
-            <div id="customerEmailLabel" class="so-topbar-email">user@example.com</div>
-            <div id="customerAvatar" class="so-user-avatar">U</div>
-          </div>
+    <!-- Notification dropdown -->
+    <div id="notifDropdown" class="so-notif-dropdown hidden">
+      <div id="notifList" class="so-notif-list">
+        <div class="so-notif-empty">No notifications yet</div>
+      </div>
+    </div>
+  </div>
 
-          <!-- Profile Dropdown -->
-          <div id="profileDropdown" class="so-dropdown hidden">
-            <div id="profileDropdownEmail" class="so-dropdown-email">user@example.com</div>
-            <a class="so-dropdown-item" href="/portal/customer/settings.html">⚙️ Settings</a>
-            <button id="customerLogout" class="so-dropdown-item so-dropdown-logout">🚪 Log Out</button>
-          </div>
+  <!-- Profile -->
+  <div id="profileMenuBtn" class="so-topbar-user">
+    <div id="customerEmailLabel" class="so-topbar-email">user@example.com</div>
+    <div id="customerAvatar" class="so-user-avatar">U</div>
+  </div>
 
-        </div>
-      </header>
+  <!-- Profile dropdown -->
+  <div id="profileDropdown" class="so-dropdown hidden">
+    <div id="profileDropdownEmail" class="so-dropdown-email">user@example.com</div>
+    <a class="so-dropdown-item" href="./settings.html">⚙️ Settings</a>
+    <button id="customerLogoutBtn" class="so-dropdown-item so-dropdown-logout">
+      🚪 Log Out
+    </button>
+  </div>
+</div>
+
+
+</header>
+
+      <!-- END TOP BAR -->
 
       <!-- MAIN CONTENT -->
       <main class="so-main">
 
         <section class="so-section">
-
           <div id="customerAlert" class="so-alert-container"></div>
 
-          <h2>Your Shipments</h2>
-          <p class="so-topbar-subtitle">
-            These shipments are visible only to you, based on your email address.
-          </p>
-
+          <h2 style="margin-bottom: 0.75rem;">Your Shipments</h2>
           <input 
-            id="searchInput"
-            class="so-input"
-            placeholder="Search by tracking number..."
-            style="margin-bottom: 1rem; max-width: 320px;"
-          />
+  id="searchInput"
+  class="so-input"
+  placeholder="Search by tracking number..."
+  style="margin-bottom: 1rem; max-width: 320px;"
+/>
 
           <div class="so-filter-bar">
-            <button class="so-filter-btn so-filter-active" data-filter="all">All</button>
-            <button class="so-filter-btn" data-filter="in-transit">In Transit</button>
-            <button class="so-filter-btn" data-filter="ready">Ready</button>
-            <button class="so-filter-btn" data-filter="delivered">Delivered</button>
-            <button class="so-filter-btn" data-filter="created">Created</button>
-          </div>
+  <button class="so-filter-btn so-filter-active" data-filter="all">All</button>
+  <button class="so-filter-btn" data-filter="in-transit">In Transit</button>
+  <button class="so-filter-btn" data-filter="ready">Ready</button>
+  <button class="so-filter-btn" data-filter="delivered">Delivered</button>
+  <button class="so-filter-btn" data-filter="created">Created</button>
+</div>
+
+          <p class="so-topbar-subtitle" style="margin-bottom: 1.25rem;">
+            These shipments are visible only to you, based on your email address.
+          </p>
 
           <div id="shipmentsList" class="so-grid-4">
             <div class="so-card so-card-panel">
               <p class="so-activity-placeholder">Loading your shipments...</p>
             </div>
           </div>
-
         </section>
 
       </main>
+    </div><!-- END .so-layout -->
 
+  </div><!-- END .so-layout-wrapper -->
+
+  <!-- READ-ONLY TIMELINE MODAL -->
+  <div id="timelineModal" class="so-modal">
+    <div class="so-modal-content">
+      <button id="timelineClose" class="so-modal-close">×</button>
+      <h2>Shipment Timeline</h2>
+      <p id="timelineTracking" class="so-topbar-subtitle"></p>
+
+      <ul id="timelineList" class="so-activity-list">
+        <li class="so-activity-placeholder">Loading events...</li>
+      </ul>
     </div>
-
   </div>
 
-  <!-- JS -->
-  <script type="module" src="/portal/js/customer-dashboard.js"></script>
-
+  <script type="module" src="../js/customer-dashboard.js"></script>
 </body>
 </html>
-
