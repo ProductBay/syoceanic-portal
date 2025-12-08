@@ -1,0 +1,122 @@
+<!-- footer.html -->
+<footer class="site-foot fade-in">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="../assets/logo/logo.png" class="footer-logo" alt="SyOceanic Logo" />
+      <p>SyOceanic Limited — Shipping • Commerce • Marine Support</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../services/china-shipping.html">China Shipping</a>
+      <a href="../services/online-store.html">Online Store</a>
+      <a href="../services/auction-warehouse.html">Auction Warehouse</a>
+      <a href="../services/ship-chandling.html">Ship Chandling</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+
+    <p class="footer-copy">
+      © 2025 SyOceanic Limited — All Rights Reserved.<br />
+      Developed by <strong>A’Dash Tech</strong> Mayfield Blvd, Southfield, St Elizabeth, Jamaica —
+      Lead Developer: <strong>Ashandie Powell</strong>.
+    </p>
+    <p class="footer-legal">
+      This website is provided as a demonstration platform for SyOceanic Limited. All content,
+      branding and workflows are illustrative and may not reflect final commercial operations.
+      By using this demo, you agree not to misuse the system, attempt unauthorized access, or
+      submit harmful, fraudulent or illegal data. Misuse or abuse of this platform may result
+      in revoked access, reporting to relevant service providers, and legal action where applicable.
+    </p>
+  </div>
+</footer>
+
+<!-- Floating Contact Strip -->
+<div class="floating-contact">
+  <a href="https://wa.me/18765947320" class="fc-btn whatsapp" target="_blank" title="Chat on WhatsApp">
+    <img src="./assets/icons/whatsapp.svg" alt="WhatsApp"/>
+  </a>
+  <a href="tel:+18765947320" class="fc-btn call" title="Call Us">
+    <span>📞</span>
+  </a>
+  <a href="mailto:support@syoceanic.com" class="fc-btn email" title="Email Support">
+    <span>✉</span>
+  </a>
+</div>
+
+<style>
+  footer.site-foot {
+    background: #111;
+    color: #ccc;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.9rem;
+  }
+  .footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover {
+    color: #fff;
+  }
+
+  /* Floating Contact Buttons */
+  .floating-contact {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  .fc-btn {
+    background: #222;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #fff;
+  }
+  .fc-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  .fc-btn:hover {
+    background: #007bff;
+  }
+  .fc-btn.whatsapp:hover {
+    background: #25D366;
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    animation: fadeInUp 1s ease both;
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+</style>
