@@ -251,9 +251,61 @@
     </section>
 
     <!-- REACT CALCULATOR -->
-    <section class="calc-shell" id="calculator-section">
-      <h2>Shipping Calculator</h2>
-      <p style="color:var(--muted); margin-top:6px;">Enter package details below for instant estimate.</p>
+   
+<!-- Shipping Calculator Section -->
+<section id="shipping-calculator">
+  <div class="syo-calculator">
+    <h2>Shipping Cost Calculator</h2>
+    <form id="syoCalcForm">
+      <div class="form-group">
+        <label for="origin">Origin Country</label>
+        <select id="origin" required>
+          <option value="" disabled selected>Select Origin</option>
+          <option value="CN">China</option>
+          <option value="US">United States</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination Country</label>
+        <select id="destination" required>
+          <option value="" disabled selected>Select Destination</option>
+          <option value="JM">Jamaica</option>
+          <option value="US">United States</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" step="0.1" required />
+      </div>
+      <div class="form-group">
+        <label>Dimensions (cm)</label>
+        <div class="form-inline">
+          <input type="number" id="length" placeholder="L" required />
+          <input type="number" id="width" placeholder="W" required />
+          <input type="number" id="height" placeholder="H" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="method">Shipping Method</label>
+        <select id="method" required>
+          <option value="" disabled selected>Select Method</option>
+          <option value="sea">Sea</option>
+          <option value="air">Air</option>
+          <option value="express">Express</option>
+        </select>
+      </div>
+      <div class="actions">
+        <button type="submit">Calculate</button>
+      </div>
+    </form>
+    <div id="syoResult" class="result"></div>
+    <div class="actions">
+      <button onclick="alert('PDF download not implemented.')">Download PDF</button>
+      <button onclick="alert('Email not implemented.')">Send to Email</button>
+      <button onclick="alert('Export not implemented.')">Export</button>
+    </div>
+  </div>
+</section>
 
       <!-- React mount point -->
       <div id="chinaCalc"></div>
@@ -285,3 +337,4 @@
 
 </body>
 </html>
+
