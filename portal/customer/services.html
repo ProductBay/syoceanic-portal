@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services – SyOceanic Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/portal.css" />
+</head>
+
+<body class="so-body so-body-admin">
+  <div class="so-layout-wrapper">
+    
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="so-sidebar">
+      <div class="so-sidebar-header">
+        <img src="../assets/logo/logo.png" class="so-logo" />
+        <h2 class="so-logo-text">Customer Portal</h2>
+      </div>
+
+      <nav class="so-nav">
+        <a href="../customer/dashboard.html" class="so-nav-link">📦 My Shipments</a>
+        <a href="../customer/services.html" class="so-nav-link so-nav-link-active">🛠️ Services</a>
+      </nav>
+
+      <div class="so-sidebar-footer">
+        <button id="customerLogoutBtn" class="so-btn so-btn-outline">Log Out</button>
+      </div>
+    </aside>
+
+    <div class="so-layout">
+      <header class="so-topbar">
+        <button id="menuToggle" class="so-icon-btn so-topbar-burger">☰</button>
+
+        <div class="so-topbar-title">
+          <h1>Services</h1>
+          <p class="so-topbar-subtitle">Access shipment tools, calculators, and service pages.</p>
+        </div>
+
+        <div class="so-topbar-right">
+          <div class="so-badge-pill so-badge-online">
+            <span class="so-dot"></span>
+            <span>Online</span>
+          </div>
+
+          <div id="profileMenuBtn" class="so-topbar-user">
+            <div id="customerEmailLabel" class="so-topbar-email">user@example.com</div>
+            <div id="customerAvatar" class="so-user-avatar">U</div>
+          </div>
+
+          <div id="profileDropdown" class="so-dropdown hidden">
+            <div id="profileDropdownEmail" class="so-dropdown-email">user@example.com</div>
+            <a class="so-dropdown-item" href="/portal/customer/settings.html">⚙️ Settings</a>
+            <button id="customerLogout" class="so-dropdown-item so-dropdown-logout">🚪 Log Out</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="so-main">
+        <section class="so-section">
+          <h2>Available Services</h2>
+          <p class="so-topbar-subtitle">Click a service to view more details.</p>
+
+          <div class="so-grid-3" style="margin-top: 1.5rem;">
+
+            <a href="../services/china-tracking.html" class="so-card so-card-link">
+              <h3>📍 China Shipment Tracking</h3>
+              <p>Track shipments from China to your destination.</p>
+            </a>
+
+            <a href="../services/china-calculator.html" class="so-card so-card-link">
+              <h3>📦 China Cost Calculator</h3>
+              <p>Estimate shipping costs from China-based suppliers.</p>
+            </a>
+
+            <a href="../services/china-preorder.html" class="so-card so-card-link">
+              <h3>📝 China Pre-Order Form</h3>
+              <p>Submit pre-order requests for sourcing in China.</p>
+            </a>
+
+            <a href="../services/cart.html" class="so-card so-card-link">
+              <h3>🛒 Shipment Cart</h3>
+              <p>Review and manage selected items for shipping.</p>
+            </a>
+
+            <a href="/portal/services/online-store.html" class="so-card so-card-link">
+              <h3>🛍️ Online Store</h3>
+              <p>Browse and order items from our curated storefront.</p>
+            </a>
+
+            <a href="/portal/services/order.html" class="so-card so-card-link">
+              <h3>📑 Order Summary</h3>
+              <p>View and manage your current service orders.</p>
+            </a>
+
+            <a href="/portal/services/product-detail.html" class="so-card so-card-link">
+              <h3>🔍 Product Details</h3>
+              <p>See full specs and options for your selected products.</p>
+            </a>
+
+            <a href="/portal/services/service-template.html" class="so-card so-card-link">
+              <h3>🧩 Service Template</h3>
+              <p>Template or form-based service requests.</p>
+            </a>
+
+            <a href="/portal/services/auction-item.html" class="so-card so-card-link">
+              <h3>🏷️ Auction Item</h3>
+              <p>List or view items available for auction shipping.</p>
+            </a>
+
+            <a href="/portal/services/auction-warehouse.html" class="so-card so-card-link">
+              <h3>🏢 Auction Warehouse</h3>
+              <p>Get details on warehouse locations and inventory.</p>
+            </a>
+
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="../js/customer-dashboard.js"></script>
+</body>
+</html>
