@@ -1,0 +1,120 @@
+/* Global Splash Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #00bcd4, #1e88e5, #00acc1, #1e88e5);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Animated Background */
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Splash Container */
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Logo Animation */
+.splash-logo img {
+    width: 120px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: logoDrop 1s forwards 0.3s;
+}
+
+@keyframes logoDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Text */
+.splash-logo h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards 0.6s;
+}
+
+.splash-logo p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards 0.8s;
+}
+
+/* Fade-up Animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Splash Options Grid */
+.splash-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Buttons */
+.splash-btn {
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+}
+
+/* Staggered Animation Delays for Buttons */
+.splash-btn.china { background: #ff5722; animation-delay: 1s; }
+.splash-btn.store { background: #4caf50; animation-delay: 1.2s; }
+.splash-btn.auction { background: #ffc107; color: #222; animation-delay: 1.4s; }
+.splash-btn.chandling { background: #009688; animation-delay: 1.6s; }
+
+/* Hover Effects */
+.splash-btn:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* FadeIn Page */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media(max-width: 768px) {
+    .splash-logo h1 { font-size: 36px; }
+    .splash-logo p { font-size: 16px; }
+    .splash-btn { font-size: 18px; padding: 18px; }
+}

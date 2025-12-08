@@ -1,0 +1,135 @@
+/* Body & Section Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #222;
+}
+
+h1, h2, h3 {
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.china-hero {
+    background: linear-gradient(120deg, #1e88e5, #00bcd4);
+    color: #fff;
+    padding: 80px 10%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.china-hero h2 {
+    font-size: 48px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.china-hero p {
+    font-size: 20px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards 0.3s;
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shipping Cards Grid */
+.shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 10%;
+}
+
+/* Individual Card */
+.shipping-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+}
+
+/* Card Image Hover */
+.shipping-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.shipping-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Card Hover */
+.shipping-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Card Content */
+.shipping-card h3 {
+    padding: 20px 20px 10px 20px;
+}
+
+.shipping-card p {
+    padding: 0 20px 20px 20px;
+    color: #555;
+}
+
+/* Buttons */
+.shipping-card .btn {
+    display: inline-block;
+    margin: 0 20px 20px 20px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    background: #1e88e5;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shipping-card .btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: #00bcd4;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Section Entrance Animations on Scroll */
+@keyframes fadeInScroll {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Apply scroll animation using class (JS optional) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInScroll 0.8s forwards;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .china-hero h2 { font-size: 36px; }
+    .china-hero p { font-size: 18px; }
+}

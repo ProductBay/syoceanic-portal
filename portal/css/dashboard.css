@@ -1,0 +1,342 @@
+:root {
+  --ocean: #003a70;
+  --ocean-dark: #00254a;
+  --wave: #00c2ff;
+  --wave-soft: rgba(0, 194, 255, 0.12);
+  --coral: #ff7a45;
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --border-soft: #d1d5db;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #f0f9ff 0%, #eef2ff 40%, #e5e7eb 100%);
+  color: #111827;
+}
+
+/* HEADER / NAV */
+
+.dashboard-header {
+  background: linear-gradient(120deg, var(--ocean), var(--ocean-dark));
+  color: #fff;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-header .brand img.brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  padding: 4px;
+}
+
+.dashboard-header .title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.dashboard-header .subtitle {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dashboard-nav a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.86rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: rgba(15, 23, 42, 0.2);
+  transition: background 0.18s, transform 0.18s, border-color 0.18s;
+}
+
+.dashboard-nav a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+.dashboard-nav a.active {
+  background: #fff;
+  color: var(--ocean-dark);
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+/* MAIN LAYOUT */
+
+.dashboard-container {
+  max-width: 1100px;
+  margin: 26px auto 40px;
+  padding: 0 18px;
+}
+
+.dashboard-container h1 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  color: var(--ocean-dark);
+}
+
+.dashboard-container .muted {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* TABLE WRAPPER */
+
+.table-wrapper {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 16px 16px 10px;
+  overflow-x: auto;
+}
+
+/* LOGIN PAGE */
+
+.login-wrapper {
+  max-width: 400px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.96);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 26px 24px 24px;
+}
+
+.login-wrapper h1 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: var(--ocean-dark);
+}
+
+.login-wrapper p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.login-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-wrapper input {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+  font-size: 0.9rem;
+}
+
+.login-wrapper button {
+  margin-top: 4px;
+}
+
+/* FORM CARDS (add/edit shipment, customer search) */
+
+.form-card {
+  max-width: 700px;
+  margin: 28px auto 40px;
+  background: rgba(255,255,255,0.96);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 24px 22px 22px;
+}
+
+.form-card h1 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: var(--ocean-dark);
+}
+
+.form-card p {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-card form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.form-card label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ocean);
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.form-card textarea {
+  resize: vertical;
+}
+
+/* BUTTONS */
+
+.btn-primary,
+button.btn-primary {
+  background: linear-gradient(135deg, var(--wave), #00a3e8);
+  color: #0b1120;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 194, 255, 0.35);
+  transition: transform 0.18s, box-shadow 0.18s, opacity 0.18s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 14px 32px rgba(0, 194, 255, 0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ocean-dark);
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s;
+}
+
+.btn-outline:hover {
+  background: rgba(15, 23, 42, 0.03);
+}
+
+/* CUSTOMER DASHBOARD GRID */
+
+.dashboard-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.shipment-card {
+  background: rgba(255,255,255,0.96);
+  border-radius: var(--radius-md);
+  padding: 14px 14px 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.shipment-card h2 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: var(--ocean-dark);
+}
+
+.shipment-card .meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+.badge.status {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.badge.pending {
+  background: rgba(245, 158, 11, 0.12);
+  color: #92400e;
+}
+
+.badge.delayed {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+/* FADE IN */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 720px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-nav {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .dashboard-container {
+    margin-top: 20px;
+  }
+
+  .login-wrapper {
+    margin: 40px 16px;
+  }
+
+  .form-card {
+    margin: 20px 16px 32px;
+  }
+}
