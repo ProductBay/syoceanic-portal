@@ -1,0 +1,76 @@
+/* HERO SECTION */
+.china-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 60px 10%;
+    background: #eef5ff;
+}
+
+.china-hero-img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.china-buttons .btn,
+.china-buttons .btn2,
+.china-buttons .btn3 {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn { background: #1e90ff; }
+.btn2 { background: #3bb273; }
+.btn3 { background: #ff9f1c; }
+
+.how-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* FORMS */
+.form-section, .track-section, .calc-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.btn {
+    padding: 14px 26px;
+    border: none;
+    border-radius: 6px;
+    background: #1e90ff;
+    color: white;
+    cursor: pointer;
+}
+
+.calc-box {
+    max-width: 400px;
+    margin: 0 auto;
+}
