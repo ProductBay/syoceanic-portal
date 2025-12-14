@@ -4,172 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SyOceanic Shipping Calculator</title>
+  <link rel="stylesheet" href="../css/global.css" />
 
-  <style>
-    :root{
-      --ocean:#003A70;
-      --wave:#00C2FF;
-      --accent:#FF7A45;
-      --bg:#F2F2F2;
-      --card:#ffffff;
-      --text:#1B1B1B;
-      --muted:#6b7280;
-      --radius:12px;
-    }
 
-    *{ box-sizing:border-box }
-    body{
-      margin:0;
-      font-family:"Segoe UI",Inter,system-ui,-apple-system,"Helvetica Neue",Arial;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-    }
-
-    /* HEADER */
-    .site-header{
-      background:linear-gradient(90deg,var(--ocean),#005a9a);
-      color:#fff;
-      padding:18px 28px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.08);
-    }
-    .site-brand{ display:flex; align-items:center; gap:14px; }
-    .brand-logo{ height:150px; width:auto; border-radius:8px; }
-    .brand-title{ font-size:1.15rem; font-weight:700; }
-
-    nav.primary{
-      display:flex; gap:18px;
-    }
-    nav.primary a{
-      color:rgba(255,255,255,0.92);
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.95rem;
-      padding:8px 12px;
-      border-radius:8px;
-      transition:all .18s;
-    }
-    nav.primary a:hover{
-      background:rgba(255,255,255,0.06);
-      transform:translateY(-2px);
-    }
-
-    /* HERO */
-    .hero{
-      max-width:1200px; 
-      margin:28px auto 10px;
-      padding:42px;
-      border-radius:16px;
-      background:linear-gradient(180deg,rgba(0,194,255,0.06),rgba(0,58,112,0.02));
-      display:flex; 
-      gap:30px;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .hero-left{ flex:1; }
-    .hero h1{ margin:0; color:var(--ocean); font-size:1.8rem; }
-    .hero p{ margin:12px 0 20px; color:var(--muted); line-height:1.6; }
-    .hero-cta{ display:flex; gap:12px; }
-
-    .btn-primary{
-      background:linear-gradient(90deg,var(--wave),#00A8E0);
-      color:var(--text);
-      padding:12px 20px;
-      border-radius:10px;
-      border:none;
-      font-weight:700;
-      cursor:pointer;
-      box-shadow:0 8px 30px rgba(0,194,255,0.12);
-      transition:transform .18s, box-shadow .18s;
-    }
-    .btn-primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 14px 40px rgba(0,194,255,0.18);
-    }
-
-    .btn-ghost{
-      background:transparent;
-      border:2px solid rgba(0,0,0,0.06);
-      padding:10px 16px;
-      border-radius:10px;
-      color:var(--muted);
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    /* Sections */
-    .container{ max-width:1100px; margin:26px auto; padding:0 20px; }
-    .cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-    .info-card{
-      background:var(--card);
-      padding:18px;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(9,30,63,0.04);
-    }
-    .info-card strong{ color:var(--ocean); }
-
-    /* FAQ */
-    .faq{ margin-top:18px; display:grid; gap:12px;}
-    .faq-item{
-      background:var(--card);
-      padding:14px;
-      border-radius:10px;
-      box-shadow:0 6px 20px rgba(9,30,63,0.04);
-    }
-    .faq-item h3{
-      margin:0;
-      font-size:1rem;
-      cursor:pointer;
-      color:var(--ocean);
-    }
-    .faq-item p{
-      margin:8px 0 0;
-      color:var(--muted);
-      display:none;
-      line-height:1.5;
-    }
-
-    /* Calculator */
-    .calc-shell{
-      margin-top:26px;
-      padding:22px;
-      border-radius:14px;
-      background:linear-gradient(180deg,#ffffff,#f7fdff);
-      box-shadow:0 10px 36px rgba(0,58,112,0.06);
-    }
-
-    /* Footer */
-    footer.site-foot{
-      text-align:center;
-      padding:28px 20px;
-      color:var(--muted);
-      margin-top:36px;
-    }
-
-    @media(max-width:900px){
-      .hero{
-        flex-direction:column;
-        text-align:center;
-      }
-      .cards{
-        grid-template-columns:1fr;
-      }
-      nav.primary{
-        display:none;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
  <header class="site-header">
   <div class="site-brand">
-    <img class="brand-logo" src="/logo.png" alt="SyOceanic Logo" />
+    <img class="brand-logo" src="../assets/logo/logo.png" alt="SyOceanic Logo" />
     <div>
       <div class="brand-title"></div>
       <div style="font-size:0.85rem; color:rgba(255,255,255,0.9)">
@@ -179,13 +23,13 @@
   </div>
 
   <nav class="primary">
-    <a href="/index.html">Home</a>
-    <a href="/services/china-shipping.html">China Shipping</a>
-    <a href="/services/china-preorder.html">Preorder</a>
-    <a href="/services/china-tracking.html">Track</a>
-    <a href="/services/china-calculator.html" class="active">Calculator</a>
-    <a href="/services/auction-warehouse.html">Auction Warehouse</a>
-    <a href="/contact.html">Contact</a>
+    <a href="../index.html">Home</a>
+    <a href="../services/china-shipping.html">China Shipping</a>
+    <a href="../services/china-preorder.html">Preorder</a>
+    <a href="../services/china-tracking.html">Track</a>
+    <a href="../services/china-calculator.html" class="active">Calculator</a>
+    <a href="../services/auction-warehouse.html">Auction Warehouse</a>
+    <a href="../contact.html">Contact</a>
   </nav>
 </header>
 
@@ -250,13 +94,7 @@
       </div>
     </section>
 
-    <!-- REACT CALCULATOR -->
-    <section class="calc-shell" id="calculator-section">
-      <h2>Shipping Calculator</h2>
-      <p style="color:var(--muted); margin-top:6px;">Enter package details below for instant estimate.</p>
-
-   
-<!-- Shipping Calculator Section -->
+  <!-- Shipping Calculator Section -->
 <section id="shipping-calculator">
   <div class="syo-calculator">
     <h2>Shipping Cost Calculator</h2>
@@ -311,15 +149,18 @@
   </div>
 </section>
 
+
       <!-- React mount point -->
       <div id="chinaCalc"></div>
     </section>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="site-foot">
-    <p>© 2025 <strong>SyOceanic Limited</strong> — Shipping & Logistics.</p>
-  </footer>
+<div class="contact-strip-float">
+  <a href="https://wa.me/18765947320" class="cs-btn" target="_blank" title="WhatsApp Us">💬</a>
+  <a href="tel:+18765947320" class="cs-btn" title="Call Us">📞</a>
+  <a href="mailto:support@syoceanic.com" class="cs-btn" title="Email Us">✉</a>
+</div>
+
 
   <!-- JS: FAQ + CTA -->
   <script>
@@ -335,10 +176,31 @@
       }
     });
   </script>
+<script>
+  const syoRates = { sea: 1.2, air: 6.5, express: 12.0 };
+  const syoDivisors = { sea: 1000, air: 6000, express: 5000 };
+  document.getElementById('syoCalcForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const weight = parseFloat(document.getElementById('weight').value);
+    const length = parseFloat(document.getElementById('length').value);
+    const width  = parseFloat(document.getElementById('width').value);
+    const height = parseFloat(document.getElementById('height').value);
+    const method = document.getElementById('method').value;
+    const divisor = syoDivisors[method] || 5000;
+    const volWeight = (length * width * height) / divisor;
+    const chargeable = Math.max(weight, volWeight);
+    const rate = syoRates[method] || 0;
+    const cost = (chargeable * rate).toFixed(2);
+    const resultText = `Chargeable Weight: ${chargeable.toFixed(1)} kg — Estimated Cost: $${cost}`;
+    document.getElementById('syoResult').textContent = resultText;
+  });
+</script>
 
   <!-- Vite React Bundle -->
   <script type="module" src="/src/main.jsx"></script>
-
+  <!-- FOOTER -->
+  <footer class="site-foot">
+    <p>© 2025 <strong>SyOceanic Limited</strong> — Shipping & Logistics.</p>
+  </footer>
 </body>
 </html>
-
